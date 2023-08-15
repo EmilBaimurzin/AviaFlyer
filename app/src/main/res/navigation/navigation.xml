@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentRoot">
+
+    <fragment
+        android:id="@+id/fragmentRoot"
+        android:name="com.aviafly.game.ui.root.FragmentRoot"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentRoot_to_fragmentAviaFly"
+            app:destination="@id/fragmentAviaFly" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAviaFly"
+        android:name="com.aviafly.game.ui.aviafly.FragmentAviaFly"
+        android:label="FragmentAviaFly" >
+        <action
+            android:id="@+id/action_fragmentAviaFly_to_dialogEnd"
+            app:destination="@id/dialogEnd" />
+        <argument
+            android:name="time"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentAviaFly_to_dialogPause"
+            app:destination="@id/dialogPause" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogEnd"
+        android:name="com.aviafly.game.ui.dialogs.DialogGameOver"
+        android:label="DialogEnd" >
+        <argument
+            android:name="time"
+            app:argType="integer" />
+        <argument
+            android:name="coins"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogPause"
+        android:name="com.aviafly.game.ui.dialogs.DialogPause"
+        android:label="DialogPause" />
+</navigation>

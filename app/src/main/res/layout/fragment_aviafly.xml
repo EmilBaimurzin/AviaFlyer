@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background03">
+
+    <FrameLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/player"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:src="@drawable/air"/>
+
+<!--        <ImageView-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="140dp"-->
+<!--            android:src="@drawable/bomb"/>-->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bombsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/coinsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/thundersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/rocketsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/bonusesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.aviafly.game.core.library.CustomImageButton
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/magnet"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/magnet"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintStart_toEndOf="@+id/home" />
+
+    <ImageView
+        android:id="@+id/shield"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/shield"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintStart_toEndOf="@+id/magnet" />
+
+    <ImageView
+        android:id="@+id/attack"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/attack"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintStart_toEndOf="@+id/shield" />
+
+    <TextView
+        android:id="@+id/magnetAmount"
+        style="@style/BasicText"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="-3dp"
+        android:background="@drawable/number"
+        android:paddingBottom="5dp"
+        android:textColor="@color/pink"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/magnet"
+        app:layout_constraintEnd_toEndOf="@+id/magnet"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/shieldAmount"
+        style="@style/BasicText"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="-3dp"
+        android:background="@drawable/number"
+        android:paddingBottom="5dp"
+        android:textColor="@color/pink"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/shield"
+        app:layout_constraintEnd_toEndOf="@+id/shield"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/attackAmount"
+        style="@style/BasicText"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="-3dp"
+        android:background="@drawable/number"
+        android:paddingBottom="5dp"
+        android:textColor="@color/pink"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/attack"
+        app:layout_constraintEnd_toEndOf="@+id/attack"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/balance"
+        style="@style/BasicText"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/balance"
+        android:paddingStart="27dp"
+        android:paddingTop="4dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="12000" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/BasicText"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/time"
+        android:paddingStart="27dp"
+        android:paddingTop="4dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintEnd_toStartOf="@+id/balance"
+        tools:text="12:00" />
+
+    <com.aviafly.game.core.library.CustomImageButton
+        android:id="@+id/pause"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/pause"
+        app:layout_constraintEnd_toStartOf="@+id/time"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/game_over"
+        android:layout_width="260dp"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/time"
+                style="@style/BasicText"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/time"
+                android:paddingStart="27dp"
+                android:paddingTop="4dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/home"
+                app:layout_constraintEnd_toStartOf="@+id/balance"
+                tools:text="12:00" />
+
+            <TextView
+                android:id="@+id/balance"
+                style="@style/BasicText"
+                android:layout_width="80dp"
+                android:layout_height="45dp"
+                android:background="@drawable/balance"
+                android:paddingStart="27dp"
+                android:paddingTop="4dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/home"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="12000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <com.aviafly.game.core.library.CustomImageButton
+                android:id="@+id/home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/home"/>
+
+            <com.aviafly.game.core.library.CustomImageButton
+                android:id="@+id/restart"
+                android:layout_marginStart="15dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/restart"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
